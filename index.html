@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Top 50 ASP.NET Core Interview Questions & Answers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+header {
+    padding: 30px;
+    text-align: center;
+    background: #020617;
+    border-bottom: 2px solid #1e293b;
+}
+header h1 {
+    color: #a5b4fc;
+    margin-bottom: 10px;
+}
+header p {
+    color: #9ca3af;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+.card {
+    background: #020617;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.card h2 {
+    color: #c7d2fe;
+    font-size: 18px;
+}
+.answer {
+    color: #22c55e;
+    font-weight: bold;
+    margin-top: 10px;
+}
+ul {
+    margin-top: 10px;
+}
+li {
+    margin-bottom: 6px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #1f2937;
+    padding: 8px;
+}
+th {
+    background: #020617;
+    color: #93c5fd;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #9ca3af;
+    border-top: 1px solid #1f2937;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>✅ Top 50 ASP.NET Core Interview Questions & Answers</h1>
+<p>Complete Interview Preparation – Beginner to Advanced</p>
+</header>
+
+<div class="container">
+
+<!-- 1 -->
+<div class="card">
+<h2>1️⃣ What is .NET Core?</h2>
+<div class="answer">Answer:</div>
+<p>.NET Core is a free, open-source, cross-platform framework developed by Microsoft to build modern web, cloud, desktop, and mobile applications.</p>
+<ul>
+<li><b>.NET Framework</b> – WPF, Windows Forms, ASP.NET</li>
+<li><b>.NET Core</b> – ASP.NET Core, UWP</li>
+<li><b>Mono (Xamarin)</b> – iOS, Android, macOS</li>
+</ul>
+<p>All frameworks share APIs via <b>.NET Standard</b>.</p>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<h2>2️⃣ Advantages of .NET Core over .NET Framework</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>Cross-platform</li>
+<li>Open-source</li>
+<li>High performance</li>
+<li>Angular, React, Vue support</li>
+<li>Built-in Dependency Injection</li>
+<li>IIS, Kestrel, Nginx hosting</li>
+<li>Multiple IDE support</li>
+</ul>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<h2>3️⃣ Default project structure in ASP.NET Core</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>wwwroot – Static files</li>
+<li>Program.cs – Entry point</li>
+<li>Startup.cs – Optional after .NET 6</li>
+<li>appsettings.json – Configuration</li>
+</ul>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<h2>4️⃣ Role of Program.cs</h2>
+<div class="answer">Answer:</div>
+<p>After .NET 6, Program.cs configures services, middleware, routing, and environment using the minimal hosting model.</p>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<h2>5️⃣ Role of Startup.cs</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>ConfigureServices() – Register services</li>
+<li>Configure() – Configure middleware</li>
+</ul>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<h2>6️⃣ ConfigureServices vs Configure</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>ConfigureServices – Registers services</li>
+<li>Configure – Handles HTTP requests</li>
+</ul>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<h2>7️⃣ Dependency Injection</h2>
+<div class="answer">Answer:</div>
+<p>DI creates loosely coupled applications by injecting dependencies instead of creating objects directly.</p>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<h2>8️⃣ AddSingleton vs AddScoped vs AddTransient</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>AddSingleton – One instance for app</li>
+<li>AddScoped – One instance per request</li>
+<li>AddTransient – New instance always</li>
+</ul>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<h2>9️⃣ Middleware</h2>
+<div class="answer">Answer:</div>
+<p>Middleware executes on every HTTP request as part of the pipeline.</p>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<h2>🔟 Kestrel</h2>
+<div class="answer">Answer:</div>
+<p>Kestrel is a lightweight, cross-platform web server used by ASP.NET Core.</p>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<h2>1️⃣1️⃣ Kestrel vs IIS</h2>
+<table>
+<tr><th>Kestrel</th><th>IIS</th></tr>
+<tr><td>Lightweight</td><td>Full-featured</td></tr>
+<tr><td>Cross-platform</td><td>Windows only</td></tr>
+<tr><td>Open-source</td><td>Closed-source</td></tr>
+</table>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<h2>1️⃣2️⃣ Request Delegate (Run, Use, Map)</h2>
+<div class="answer">Answer:</div>
+<ul>
+<li>Use – Executes next middleware</li>
+<li>Run – Terminates pipeline</li>
+<li>Map – Path-based execution</li>
+</ul>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<h2>1️⃣3️⃣ Host in ASP.NET Core</h2>
+<div class="answer">Answer:</div>
+<p>Host configures server, pipeline, and starts the application.</p>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<h2>1️⃣4️⃣ Configuration storage techniques</h2>
+<ul>
+<li>appsettings.json</li>
+<li>Azure Key Vault</li>
+<li>Environment variables</li>
+<li>Command-line arguments</li>
+<li>Custom providers</li>
+</ul>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<h2>1️⃣5️⃣ Routing in ASP.NET Core</h2>
+<div class="answer">Answer:</div>
+<p>Maps URL to controller actions. Example: /Home/Index/100</p>
+</div>
+
+<!-- 16 -->
+<div class="card">
+<h2>1️⃣6️⃣ Attribute Routing</h2>
+<div class="answer">Answer:</div>
+<p>Defines routes using attributes on controllers/actions.</p>
+</div>
+
+<!-- 17 -->
+<div class="card">
+<h2>1️⃣7️⃣ Request Processing Pipeline</h2>
+<p>Request → Middleware → Routing → Controller → Action → Response</p>
+</div>
+
+<!-- 18 -->
+<div class="card">
+<h2>1️⃣8️⃣ ASP.NET Core with .NET Framework</h2>
+<p>Yes, it can work with .NET Framework 4.x.</p>
+</div>
+
+<!-- 19 -->
+<div class="card">
+<h2>1️⃣9️⃣ Meta Package</h2>
+<p>Microsoft.AspNetCore.App bundles ASP.NET Core dependencies.</p>
+</div>
+
+<!-- 20 -->
+<div class="card">
+<h2>2️⃣0️⃣ Static Files</h2>
+<p>Stored in wwwroot and served using UseStaticFiles().</p>
+</div>
+
+<!-- 21 -->
+<div class="card">
+<h2>2️⃣1️⃣ JSON Files</h2>
+<ul>
+<li>global.json</li>
+<li>launchSettings.json</li>
+<li>appsettings.json</li>
+<li>bundleconfig.json</li>
+<li>project.json</li>
+</ul>
+</div>
+
+<!-- 22 -->
+<div class="card">
+<h2>2️⃣2️⃣ .NET Standard</h2>
+<p>Defines common APIs across .NET platforms.</p>
+</div>
+
+<!-- 23 -->
+<div class="card">
+<h2>2️⃣3️⃣ Razor Pages</h2>
+<p>Page-centric development model similar to Web Forms.</p>
+</div>
+
+<!-- 24 -->
+<div class="card">
+<h2>2️⃣4️⃣ Dependency Injection in Views</h2>
+<p>Using <b>@inject</b> directive.</p>
+</div>
+
+<!-- 25 -->
+<div class="card">
+<h2>2️⃣5️⃣ Custom Middleware</h2>
+<p>Allows custom logic execution per request.</p>
+</div>
+
+<!-- 26 -->
+<div class="card">
+<h2>2️⃣6️⃣ Session & State Management</h2>
+<ul>
+<li>Cookies</li>
+<li>Session</li>
+<li>TempData</li>
+<li>Query String</li>
+<li>Hidden Fields</li>
+</ul>
+</div>
+
+<!-- 27 -->
+<div class="card">
+<h2>2️⃣7️⃣ Model Validation</h2>
+<p>Uses Data Annotations like [Required].</p>
+</div>
+
+<!-- 28 -->
+<div class="card">
+<h2>2️⃣8️⃣ Error Handling</h2>
+<p>Handled using exception middleware and environment-based configuration.</p>
+</div>
+
+<!-- 29 -->
+<div class="card">
+<h2>2️⃣9️⃣ Enable Session</h2>
+<ul>
+<li>Add session service</li>
+<li>UseSession() middleware</li>
+</ul>
+</div>
+
+<!-- 30 -->
+<div class="card">
+<h2>3️⃣0️⃣ Model Binding</h2>
+<p>Maps request data to action parameters automatically.</p>
+</div>
+
+<!-- 31 -->
+<div class="card">
+<h2>3️⃣1️⃣ Request Life Cycle</h2>
+<p>Request → Middleware → Routing → Controller → Filters → Action → Response</p>
+</div>
+
+<!-- 32 -->
+<div class="card">
+<h2>3️⃣2️⃣ Authentication vs Authorization</h2>
+<p>Authentication = Identity | Authorization = Permissions</p>
+</div>
+
+<!-- 33 -->
+<div class="card">
+<h2>3️⃣3️⃣ Authentication Middleware</h2>
+<p>Validates credentials and sets user identity.</p>
+</div>
+
+<!-- 34 -->
+<div class="card">
+<h2>3️⃣4️⃣ Authorization Middleware</h2>
+<p>Checks access permissions.</p>
+</div>
+
+<!-- 35 -->
+<div class="card">
+<h2>3️⃣5️⃣ Authentication vs Authorization Difference</h2>
+<p>Authentication first, Authorization next.</p>
+</div>
+
+<!-- 36 -->
+<div class="card">
+<h2>3️⃣6️⃣ Filters</h2>
+<p>Execute before or after controller actions.</p>
+</div>
+
+<!-- 37 -->
+<div class="card">
+<h2>3️⃣7️⃣ Filter Types</h2>
+<ul>
+<li>Authorization</li>
+<li>Action</li>
+<li>Result</li>
+<li>Exception</li>
+</ul>
+</div>
+
+<!-- 38 -->
+<div class="card">
+<h2>3️⃣8️⃣ Middleware vs Filters</h2>
+<p>Middleware is global, Filters are MVC-specific.</p>
+</div>
+
+<!-- 39 -->
+<div class="card">
+<h2>3️⃣9️⃣ Configure CORS</h2>
+<p>Using AddCors() and UseCors().</p>
+</div>
+
+<!-- 40 -->
+<div class="card">
+<h2>4️⃣0️⃣ CORS</h2>
+<p>Allows secure cross-origin requests.</p>
+</div>
+
+<!-- 41 -->
+<div class="card">
+<h2>4️⃣1️⃣ Web API</h2>
+<p>Builds RESTful services returning JSON.</p>
+</div>
+
+<!-- 42 -->
+<div class="card">
+<h2>4️⃣2️⃣ MVC vs Web API</h2>
+<p>MVC returns views + data, Web API returns data only.</p>
+</div>
+
+<!-- 43 -->
+<div class="card">
+<h2>4️⃣3️⃣ Minimal API</h2>
+<p>Lightweight API model introduced in .NET 6.</p>
+</div>
+
+<!-- 44 -->
+<div class="card">
+<h2>4️⃣4️⃣ IActionResult vs ActionResult</h2>
+<p>IActionResult is interface, ActionResult is base class.</p>
+</div>
+
+<!-- 45 -->
+<div class="card">
+<h2>4️⃣5️⃣ ModelState.IsValid</h2>
+<p>Checks if model validation succeeded.</p>
+</div>
+
+<!-- 46 -->
+<div class="card">
+<h2>4️⃣6️⃣ Logging</h2>
+<p>Captures application events using built-in providers.</p>
+</div>
+
+<!-- 47 -->
+<div class="card">
+<h2>4️⃣7️⃣ Caching</h2>
+<ul>
+<li>In-memory caching</li>
+<li>Distributed caching</li>
+</ul>
+</div>
+
+<!-- 48 -->
+<div class="card">
+<h2>4️⃣8️⃣ async & await</h2>
+<p>Enable non-blocking asynchronous execution.</p>
+</div>
+
+<!-- 49 -->
+<div class="card">
+<h2>4️⃣9️⃣ IHttpContextAccessor</h2>
+<p>Access HttpContext outside controllers.</p>
+</div>
+
+<!-- 50 -->
+<div class="card">
+<h2>5️⃣0️⃣ Deployment</h2>
+<ul>
+<li>IIS</li>
+<li>Azure App Service</li>
+<li>Linux</li>
+<li>Docker</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+<p>© ASP.NET Core Interview Guide | Happy Coding 🚀</p>
+</footer>
+
+</body>
+</html>
